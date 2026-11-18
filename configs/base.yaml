@@ -1,0 +1,26 @@
+project_name: AgroSynth_Gen
+seed: 42
+image_size: 128
+num_classes: 6
+batch_size: 16
+num_workers: 2
+
+data:
+  root: data/processed
+  train_dir: data/processed/train
+  val_dir: data/processed/val
+  test_dir: data/processed/test
+  external_dir: data/raw/plantdoc_external
+
+gan:
+  experiment: A
+  total_kimg: 1000
+  snapshot_interval: 50
+
+filtering:
+  confidence_threshold: null  # À déterminer sur validation
+  nearest_neighbor_threshold: null  # À déterminer sur validation
+
+evaluation:
+  seeds: [11, 22, 33]
+  synthetic_ratios: [0.25, 0.5, 1.0]

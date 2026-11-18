@@ -1,0 +1,25 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+.DS_Store
+
+# Données et artefacts volumineux
+data/raw/*
+data/interim/*
+data/processed/*
+!data/raw/**/.gitkeep
+!data/interim/**/.gitkeep
+!data/processed/**/.gitkeep
+outputs/checkpoints/*
+outputs/generated/*
+outputs/classifiers/*
+outputs/metrics/*
+outputs/figures/*
+!outputs/**/.gitkeep
+
+# Journaux
+*.log
+runs/
+wandb/
